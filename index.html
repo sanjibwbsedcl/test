@@ -182,7 +182,7 @@ function calculateDate() {
     if (!startValue || !daysValue) return;
 
     let startDate = new Date(startValue);
-    let daysToAdd = parseInt(daysValue);
+    let daysToAdd = parseInt(daysValue)-1;
 
     let count = 0;
 
@@ -233,3 +233,4 @@ function showError(message) {
 
 </body>
 </html>
+
