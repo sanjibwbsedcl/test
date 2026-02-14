@@ -17,7 +17,7 @@ body {
 
 .container {
     background:#ffffff;
-    width:420px;
+    width:440px;
     padding:25px 30px;
     border-radius:8px;
     box-shadow:0 8px 20px rgba(0,0,0,0.2);
@@ -33,19 +33,23 @@ body {
 
 .header img {
     height:55px;
-    margin-right:12px;
+    margin-right:2px;
 }
 
 .header-text h2 {
     margin:0;
     color:#1976d2;
-    font-size:18px;
+    font-size:14px;
+  
+
 }
 
 .header-text h3 {
     margin:0;
-    font-size:14px;
+    font-size:18px;
     color:#0d47a1;
+   
+	
 }
 
 .title {
@@ -60,18 +64,44 @@ body {
     margin-bottom:12px;
 }
 
+ .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: gray;
+}
 label {
     width:120px;
     font-weight:600;
     font-size:14px;
 }
+.topRightText {
+    
+    top: 10px;
+    right: 15px;
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 0.8;
+    font-family: Arial, sans-serif;
+}
+
 
 input {
-    flex:1;
-    padding:6px 8px;
-    border:1px solid #ccc;
-    border-radius:4px;
+    flex: 1;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    box-sizing: border-box;
 }
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
 
 button {
     padding:6px 10px;
@@ -114,19 +144,19 @@ button:hover {
 <div class="container">
 
     <div id="errorMessage"></div>
-
+<div class="topRightText">@copyright</div>
     <div class="header">
         <img src="wbsedcl_logo.png">
         <div class="header-text">
-            <h2>WBSEDCL</h2>
-            <h3>Procurement & Contract Dept.</h3>
+            <h3>WBSEDCL</h3>
+            <h2>       Procurement & Contract Department.           </h2>
         </div>
     </div>
 
     <div class="title">Working Day Calculator</div>
 
     <div class="row">
-        <label>Input Date</label>
+        <label>Enter DI Date</label>
         <input type="date" id="startDate">
     </div>
 
@@ -136,12 +166,14 @@ button:hover {
     </div>
 
     <div class="row">
-        <label>Final Date</label>
+        <label>Due On</label>
         <input type="text" id="result" readonly>
         <button onclick="copyResult()">Copy</button>
     </div>
 
     <div id="copyMessage">Date copied successfully.</div>
+<div class="footer">
+        Excluding Saturday, Sunday & Holidays
 
 </div>
 
@@ -233,4 +265,3 @@ function showError(message) {
 
 </body>
 </html>
-
