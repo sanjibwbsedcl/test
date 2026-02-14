@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Working Day Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <style>
 body {
@@ -16,12 +18,16 @@ body {
 }
 
 .container {
-    background:#ffffff;
-    width:440px;
-    padding:25px 30px;
-    border-radius:8px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    background: #ffffff;
+    width: 420px;
+    max-width: 95%;   /* IMPORTANT for mobile */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
+
+
 
 .header {
     display:flex;
@@ -139,6 +145,33 @@ button:hover {
     margin-bottom:10px;
     border-radius:4px;
 }
+@media (max-width: 480px) {
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    button {
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .companyName {
+        font-size: 13px;
+    }
+
+    .departmentName {
+        font-size: 12px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -177,6 +210,7 @@ button:hover {
     <div id="copyMessage">Date copied successfully.</div>
 <div class="footer">
         Excluding Saturday, Sunday & Holidays
+
 
 </div>
 
